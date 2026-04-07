@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concrete Tips & Project Blog | Weinandt Concrete — Twin Cities MN</title>
+<meta name="description" content="Concrete tips for homeowners, completed project showcases, and expert advice from Weinandt Concrete serving the Twin Cities area.">
+<meta name="keywords" content="concrete tips Minneapolis, concrete repair advice, when to replace driveway, concrete contractor blog Twin Cities, Weinandt Concrete">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Concrete Tips & Project Blog | Weinandt Concrete">
+<meta property="og:description" content="Expert concrete tips, project showcases, and homeowner advice from Kyle Weinandt — serving the Twin Cities since 2009.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weinandtconcrete.com/blog">
+
+<!-- Schema.org Blog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Weinandt Concrete Blog",
+  "description": "Concrete tips, project showcases, and homeowner advice from Weinandt Concrete",
+  "url": "https://weinandtconcrete.com/blog",
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Weinandt Concrete",
+    "address": {"@type": "PostalAddress", "addressRegion": "MN", "addressLocality": "Minneapolis"},
+    "telephone": "(320) 262-1086"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0a0a0a; --charcoal: #141414; --surface: #1c1c1c;
+  --border: #2a2a2a; --muted: #555; --text: #e8e8e4;
+  --soft: #9a9a94; --orange: #f05c1c; --orange-dim: rgba(240,92,26,0.12);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.6; overflow-x: hidden; }
+::selection { background: var(--orange); color: #fff; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo-mark {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--charcoal); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--orange);
+}
+.nav-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.06em; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-size: 13px; font-weight: 500; color: var(--soft); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--orange); }
+.nav-cta {
+  padding: 8px 20px; border-radius: 6px;
+  background: var(--orange); border: none;
+  color: #fff; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* BLOG HERO */
+.blog-hero {
+  padding: 72px 40px 56px;
+  background: var(--charcoal);
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.blog-hero::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px; opacity: 0.4; pointer-events: none;
+}
+.blog-hero-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
+.bh-eyebrow {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--orange); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.bh-eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--orange); }
+.blog-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  letter-spacing: 0.03em; line-height: 1;
+  margin-bottom: 16px;
+}
+.blog-hero h1 span { color: var(--orange); }
+.blog-hero-sub { color: var(--soft); max-width: 560px; font-size: 1rem; line-height: 1.7; margin-bottom: 28px; }
+.blog-cats { display: flex; gap: 8px; flex-wrap: wrap; }
+.bcat {
+  padding: 6px 16px; border-radius: 100px;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--soft); font-size: 12px; font-weight: 500;
+  cursor: pointer; transition: all 0.2s;
+}
+.bcat:hover, .bcat.active { border-color: var(--orange); color: var(--orange); background: var(--orange-dim); }
+
+/* BLOG LAYOUT */
+.blog-layout {
+  max-width: 1160px; margin: 0 auto;
+  padding: 56px 40px;
+  display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start;
+}
+.blog-main {}
+.blog-sidebar { position: sticky; top: 80px; }
+
+/* FEATURED POST */
+.featured-post {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden; margin-bottom: 32px;
+  transition: border-color 0.2s;
+}
+.featured-post:hover { border-color: var(--orange); }
+.fp-img {
+  height: 280px; background: var(--charcoal);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.fp-img-placeholder {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #1c1c1c 0%, #2a2a2a 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem; opacity: 0.3;
+}
+.fp-badge {
+  position: absolute; top: 16px; left: 16px;
+  padding: 5px 12px; border-radius: 100px;
+  background: var(--orange); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #fff;
+}
+.fp-body { padding: 28px; }
+.fp-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.fp-cat {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange);
+}
+.fp-date { font-size: 11px; color: var(--muted); }
+.fp-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem;
+  letter-spacing: 0.03em; margin-bottom: 12px; line-height: 1.1;
+  transition: color 0.2s;
+}
+.featured-post:hover .fp-title { color: var(--orange); }
+.fp-excerpt { font-size: 13px; color: var(--soft); line-height: 1.7; margin-bottom: 20px; }
+.fp-footer { display: flex; align-items: center; justify-content: space-between; }
+.fp-read {
+  padding: 9px 20px; border-radius: 6px;
+  background: var(--orange); border: none;
+  color: #fff; font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.fp-read:hover { opacity: 0.85; }
+.fp-time { font-size: 11px; color: var(--muted); }
+
+/* POST GRID */
+.posts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.post-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden; transition: all 0.22s;
+}
+.post-card:hover { border-color: var(--orange); transform: translateY(-3px); }
+.pc-img {
+  height: 160px;
+  background: linear-gradient(135deg, var(--charcoal), var(--surface));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.8rem; opacity: 0.5; position: relative;
+}
+.pc-cat-badge {
+  position: absolute; bottom: 10px; left: 12px;
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 4px;
+  background: rgba(240,92,26,0.85); color: #fff;
+}
+.pc-body { padding: 18px; }
+.pc-date { font-size: 10px; color: var(--muted); margin-bottom: 7px; font-family: 'DM Mono', monospace; }
+.pc-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem;
+  letter-spacing: 0.03em; margin-bottom: 8px; line-height: 1.1;
+  transition: color 0.2s;
+}
+.post-card:hover .pc-title { color: var(--orange); }
+.pc-excerpt { font-size: 12px; color: var(--soft); line-height: 1.6; }
+.pc-footer { padding: 0 18px 16px; display: flex; align-items: center; justify-content: space-between; }
+.pc-read { font-size: 11px; color: var(--orange); font-weight: 600; cursor: pointer; }
+.pc-time { font-size: 10px; color: var(--muted); }
+
+/* LOAD MORE */
+.load-more {
+  margin-top: 32px; text-align: center;
+}
+.lm-btn {
+  padding: 12px 32px; border-radius: 8px;
+  background: transparent; border: 1px solid var(--border);
+  color: var(--soft); font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s;
+}
+.lm-btn:hover { border-color: var(--orange); color: var(--orange); }
+
+/* SIDEBAR */
+.sidebar-section {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 22px; margin-bottom: 20px;
+}
+.ss-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
+  letter-spacing: 0.06em; margin-bottom: 16px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.ss-title span { color: var(--orange); }
+/* Popular posts */
+.pop-post { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.pop-post:last-child { border-bottom: none; }
+.pp-num {
+  font-family: 'DM Mono', monospace; font-size: 1.2rem;
+  color: var(--orange); font-weight: 500; flex-shrink: 0; min-width: 28px;
+}
+.pp-title { font-size: 12px; font-weight: 600; line-height: 1.4; margin-bottom: 3px; cursor: pointer; transition: color 0.2s; }
+.pp-title:hover { color: var(--orange); }
+.pp-meta { font-size: 10px; color: var(--muted); }
+/* Tags */
+.tags-cloud { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag-chip {
+  padding: 5px 12px; border-radius: 100px;
+  border: 1px solid var(--border); background: var(--charcoal);
+  font-size: 11px; color: var(--soft); cursor: pointer; transition: all 0.2s;
+}
+.tag-chip:hover { border-color: var(--orange); color: var(--orange); }
+/* CTA sidebar */
+.sidebar-cta {
+  background: var(--orange); border-radius: 14px; padding: 22px; text-align: center;
+}
+.sc-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.05em; margin-bottom: 8px; }
+.sc-sub { font-size: 12px; color: rgba(255,255,255,0.75); margin-bottom: 16px; line-height: 1.5; }
+.sc-btn {
+  width: 100%; padding: 11px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+  color: #fff; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: background 0.2s;
+}
+.sc-btn:hover { background: rgba(255,255,255,0.25); }
+
+/* NEWSLETTER */
+.newsletter-strip {
+  background: var(--charcoal); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 48px 40px; text-align: center;
+}
+.nl-inner { max-width: 560px; margin: 0 auto; }
+.nl-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.04em; margin-bottom: 8px; }
+.nl-sub { font-size: 13px; color: var(--soft); margin-bottom: 22px; }
+.nl-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
+.nl-input {
+  flex: 1; padding: 11px 16px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none;
+  transition: border-color 0.2s;
+}
+.nl-input:focus { border-color: var(--orange); }
+.nl-btn {
+  padding: 11px 22px; border-radius: 8px;
+  background: var(--orange); border: none;
+  color: #fff; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: opacity 0.2s; white-space: nowrap;
+}
+.nl-btn:hover { opacity: 0.85; }
+
+/* FOOTER */
+footer {
+  background: var(--charcoal); border-top: 1px solid var(--border);
+  padding: 36px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.06em; }
+.footer-brand span { color: var(--orange); }
+.footer-note { font-size: 11px; color: var(--muted); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 12px; color: var(--muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--orange); }
+
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .blog-hero { padding: 48px 20px 40px; }
+  .blog-layout { grid-template-columns: 1fr; padding: 40px 20px; gap: 32px; }
+  .blog-sidebar { position: static; }
+  .posts-grid { grid-template-columns: 1fr; }
+  .nl-form { flex-direction: column; }
+  footer { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo-mark">W</div>
+    <div class="nav-name">WEINANDT CONCRETE</div>
+  </div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/#estimator">Get Estimate</a>
+    <a href="/#gallery">Gallery</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="/#contact">Contact</a>
+  </div>
+  <button class="nav-cta" onclick="window.location='/#estimator'">Free Estimate</button>
+</nav>
+
+<!-- BLOG HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="bh-eyebrow">Weinandt Concrete — Twin Cities MN</div>
+    <h1>CONCRETE TIPS,<br>PROJECT <span>STORIES</span> &<br>HOMEOWNER ADVICE</h1>
+    <p class="blog-hero-sub">Behind-the-scenes looks at completed projects, expert tips to protect your home, and honest advice on when to call before a small problem becomes a costly one.</p>
+    <div class="blog-cats">
+      <button class="bcat active" onclick="filterCat(this,'all')">All Posts</button>
+      <button class="bcat" onclick="filterCat(this,'project')">Project Showcases</button>
+      <button class="bcat" onclick="filterCat(this,'tips')">Homeowner Tips</button>
+      <button class="bcat" onclick="filterCat(this,'repairs')">When to Call Us</button>
+      <button class="bcat" onclick="filterCat(this,'seasonal')">Seasonal Advice</button>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG LAYOUT -->
+<div class="blog-layout">
+  <main class="blog-main">
+
+    <!-- FEATURED POST -->
+    <article class="featured-post">
+      <div class="fp-img">
+        <div class="fp-img-placeholder">🏗️</div>
+        <div class="fp-badge">Featured Project</div>
+      </div>
+      <div class="fp-body">
+        <div class="fp-meta">
+          <span class="fp-cat">Project Showcase</span>
+          <span class="fp-date">March 15, 2026</span>
+        </div>
+        <div class="fp-title">COMPLETE DRIVEWAY TRANSFORMATION IN EDEN PRAIRIE: BEFORE, DURING & AFTER</div>
+        <p class="fp-excerpt">This Eden Prairie homeowner had a 22-year-old concrete driveway that had cracked, heaved, and become a safety hazard during winter. We documented the full tear-out, sub-base prep, and pour process — plus what we found underneath that was causing the heaving in the first place. Photo-heavy walkthrough inside.</p>
+        <div class="fp-footer">
+          <button class="fp-read" onclick="openPost('eden-prairie-driveway')">Read Full Story →</button>
+          <span class="fp-time">8 min read</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- POSTS GRID -->
+    <div class="posts-grid" id="posts-grid">
+
+      <article class="post-card" data-cat="tips">
+        <div class="pc-img">🔍<div class="pc-cat-badge">Homeowner Tips</div></div>
+        <div class="pc-body">
+          <div class="pc-date">March 8, 2026</div>
+          <div class="pc-title">5 EARLY WARNING SIGNS YOUR DRIVEWAY NEEDS ATTENTION</div>
+          <p class="pc-excerpt">Hairline cracks, settling edges, and pooling water are easy to ignore — until they're not. Here's what to watch for before a $500 repair becomes a $5,000 replacement.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('driveway-warning-signs')">Read More →</span>
+          <span class="pc-time">5 min read</span>
+        </div>
+      </article>
+
+      <article class="post-card" data-cat="project">
+        <div class="pc-img">🪑<div class="pc-cat-badge">Project Showcase</div></div>
+        <div class="pc-body">
+          <div class="pc-date">February 28, 2026</div>
+          <div class="pc-title">STAMPED CONCRETE PATIO IN PLYMOUTH: THE FULL BUILD</div>
+          <p class="pc-excerpt">A Plymouth family wanted an outdoor entertaining space that could handle Minnesota winters. We installed a 640 sq ft stamped concrete patio with an integrated fire pit surround. Full photo walkthrough.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('plymouth-patio')">Read More →</span>
+          <span class="pc-time">6 min read</span>
+        </div>
+      </article>
+
+      <article class="post-card" data-cat="repairs">
+        <div class="pc-img">🌡️<div class="pc-cat-badge">When to Call</div></div>
+        <div class="pc-body">
+          <div class="pc-date">February 18, 2026</div>
+          <div class="pc-title">CAN I WAIT UNTIL SPRING TO FIX THAT CRACK?</div>
+          <p class="pc-excerpt">Minnesota winters are brutal on concrete. Some cracks are cosmetic — others will triple in size by April. Here's how to tell the difference and when waiting actually costs you more.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('spring-crack-wait')">Read More →</span>
+          <span class="pc-time">4 min read</span>
+        </div>
+      </article>
+
+      <article class="post-card" data-cat="seasonal">
+        <div class="pc-img">❄️<div class="pc-cat-badge">Seasonal Advice</div></div>
+        <div class="pc-body">
+          <div class="pc-date">February 5, 2026</div>
+          <div class="pc-title">WINTER CONCRETE CARE: WHAT DE-ICERS ARE ACTUALLY SAFE</div>
+          <p class="pc-excerpt">Rock salt is cheap and everywhere — but it's one of the worst things you can put on your concrete driveway. Here's what actually works and won't destroy your investment over time.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('deicers-safe')">Read More →</span>
+          <span class="pc-time">5 min read</span>
+        </div>
+      </article>
+
+      <article class="post-card" data-cat="project">
+        <div class="pc-img">🏠<div class="pc-cat-badge">Project Showcase</div></div>
+        <div class="pc-body">
+          <div class="pc-date">January 22, 2026</div>
+          <div class="pc-title">GARAGE FLOOR RESURFACING IN MINNETONKA: FULL TRANSFORMATION</div>
+          <p class="pc-excerpt">This garage floor had oil stains, surface spalling, and a massive crack running through the center. We resurfaced it with a bonded overlay and sealed it. Before/after photos that speak for themselves.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('minnetonka-garage')">Read More →</span>
+          <span class="pc-time">5 min read</span>
+        </div>
+      </article>
+
+      <article class="post-card" data-cat="tips">
+        <div class="pc-img">💧<div class="pc-cat-badge">Homeowner Tips</div></div>
+        <div class="pc-body">
+          <div class="pc-date">January 10, 2026</div>
+          <div class="pc-title">WHY WATER POOLING NEAR YOUR FOUNDATION IS A SERIOUS PROBLEM</div>
+          <p class="pc-excerpt">Water that pools near your home's foundation doesn't just damage concrete — it can compromise your foundation over time. Here's what to look for and how proper concrete grading fixes it.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('water-pooling-foundation')">Read More →</span>
+          <span class="pc-time">6 min read</span>
+        </div>
+      </article>
+
+      <article class="post-card" data-cat="repairs">
+        <div class="pc-img">🔧<div class="pc-cat-badge">When to Call</div></div>
+        <div class="pc-body">
+          <div class="pc-date">December 15, 2025</div>
+          <div class="pc-title">SIDEWALK SETTLEMENT: REPAIR, LIFT, OR REPLACE?</div>
+          <p class="pc-excerpt">Settled or sunken sidewalk sections are a tripping hazard and a liability. We break down the three options — grinding, lifting, and full replacement — and what each one costs in the Twin Cities.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('sidewalk-repair-options')">Read More →</span>
+          <span class="pc-time">7 min read</span>
+        </div>
+      </article>
+
+      <article class="post-card" data-cat="tips">
+        <div class="pc-img">📅<div class="pc-cat-badge">Homeowner Tips</div></div>
+        <div class="pc-body">
+          <div class="pc-date">November 28, 2025</div>
+          <div class="pc-title">BEST TIME OF YEAR TO POUR CONCRETE IN MINNESOTA</div>
+          <p class="pc-excerpt">Concrete and cold don't mix well. We explain the temperature thresholds, how we handle late-season pours when needed, and the ideal window to book your project for best results and pricing.</p>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-read" onclick="openPost('best-time-pour-minnesota')">Read More →</span>
+          <span class="pc-time">4 min read</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="load-more">
+      <button class="lm-btn" onclick="loadMore()">Load More Posts</button>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-sidebar">
+
+    <!-- CTA -->
+    <div class="sidebar-cta">
+      <div class="sc-title">GET A FREE ESTIMATE</div>
+      <p class="sc-sub">Ready to start your project? Get an instant price range from our AI estimator — no drive-out needed.</p>
+      <button class="sc-btn" onclick="window.location='/#estimator'">Get Instant Estimate →</button>
+    </div>
+
+    <!-- Popular Posts -->
+    <div class="sidebar-section">
+      <div class="ss-title">POPULAR <span>POSTS</span></div>
+      <div class="pop-post">
+        <div class="pp-num">01</div>
+        <div>
+          <div class="pp-title" onclick="openPost('driveway-warning-signs')">5 Early Warning Signs Your Driveway Needs Attention</div>
+          <div class="pp-meta">5 min read · March 2026</div>
+        </div>
+      </div>
+      <div class="pop-post">
+        <div class="pp-num">02</div>
+        <div>
+          <div class="pp-title" onclick="openPost('deicers-safe')">Winter Concrete Care: What De-Icers Are Actually Safe</div>
+          <div class="pp-meta">5 min read · February 2026</div>
+        </div>
+      </div>
+      <div class="pop-post">
+        <div class="pp-num">03</div>
+        <div>
+          <div class="pp-title" onclick="openPost('spring-crack-wait')">Can I Wait Until Spring to Fix That Crack?</div>
+          <div class="pp-meta">4 min read · February 2026</div>
+        </div>
+      </div>
+      <div class="pop-post">
+        <div class="pp-num">04</div>
+        <div>
+          <div class="pp-title" onclick="openPost('best-time-pour-minnesota')">Best Time of Year to Pour Concrete in Minnesota</div>
+          <div class="pp-meta">4 min read · November 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="sidebar-section">
+      <div class="ss-title">BROWSE <span>TOPICS</span></div>
+      <div class="tags-cloud">
+        <span class="tag-chip">Driveways</span>
+        <span class="tag-chip">Patios</span>
+        <span class="tag-chip">Crack Repair</span>
+        <span class="tag-chip">Stamped Concrete</span>
+        <span class="tag-chip">Winter Care</span>
+        <span class="tag-chip">Foundations</span>
+        <span class="tag-chip">Sidewalks</span>
+        <span class="tag-chip">Garage Floors</span>
+        <span class="tag-chip">De-Icers</span>
+        <span class="tag-chip">Minneapolis</span>
+        <span class="tag-chip">Plymouth</span>
+        <span class="tag-chip">Eden Prairie</span>
+        <span class="tag-chip">Minnetonka</span>
+        <span class="tag-chip">DIY vs Pro</span>
+        <span class="tag-chip">Cost Guide</span>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="sidebar-section">
+      <div class="ss-title">ABOUT <span>KYLE</span></div>
+      <p style="font-size:12px;color:var(--soft);line-height:1.7">Kyle Weinandt has been pouring concrete across the Twin Cities since 2009. Every post on this blog comes from real jobs, real problems, and real fixes — no generic internet advice.</p>
+      <div style="margin-top:12px;font-size:12px;font-weight:600;color:var(--orange)">(320) 262-1086</div>
+      <div style="font-size:11px;color:var(--muted)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0a9aea6af80b7a5a9aea1aea4b4a3afaea3b2a5b4a5eea3afad">[email&#160;protected]</a></div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- POST MODAL -->
+<div id="post-modal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);overflow-y:auto;padding:40px 20px">
+  <div style="max-width:760px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden">
+    <div style="background:var(--charcoal);padding:16px 24px;display:flex;justify-content:space-between;align-items:center">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange)" id="modal-cat">Category</div>
+      <button onclick="closePost()" style="background:transparent;border:1px solid var(--border);color:var(--soft);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px">✕ Close</button>
+    </div>
+    <div style="padding:36px" id="modal-content">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-strip">
+  <div class="nl-inner">
+    <div class="nl-title">GET CONCRETE TIPS IN YOUR INBOX</div>
+    <p class="nl-sub">Seasonal advice, project showcases, and homeowner tips — delivered a couple times a month. No spam, unsubscribe anytime.</p>
+    <div class="nl-form">
+      <input class="nl-input" type="email" placeholder="your@email.com">
+      <button class="nl-btn" onclick="this.textContent='Subscribed ✓'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">WEINANDT <span>CONCRETE</span></div>
+    <div class="footer-note">Serving the Twin Cities since 2009 · BBB Accredited · Licensed & Insured</div>
+  </div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/blog">Blog</a>
+    <a href="/#contact">Contact</a>
+  </div>
+  <div class="footer-note">© 2026 Weinandt Concrete · (320) 262-1086</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Category filter
+function filterCat(el, cat) {
+  document.querySelectorAll('.bcat').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.post-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = 'flex'; card.style.flexDirection = 'column';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// Post content
+const POSTS = {
+  'eden-prairie-driveway': {
+    cat: 'Project Showcase',
+    title: 'Complete Driveway Transformation in Eden Prairie: Before, During & After',
+    date: 'March 15, 2026',
+    readtime: '8 min read',
+    body: `<p style="margin-bottom:16px;color:#9a9a94">This Eden Prairie homeowner called us after their driveway had been deteriorating for years. What started as a few cracks had turned into uneven sections, drainage problems, and a real slip hazard in winter.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">What We Found</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">When we broke out the old concrete, the sub-base told the whole story. Tree roots from a nearby ash tree had grown under the slab for years, pushing up one section and creating the heaving pattern the homeowner kept complaining about. No amount of patching would have fixed this — the roots would have kept growing.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">The Process</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">Full tear-out, root removal, 6" compacted class 5 base, wire mesh reinforcement, and a fresh 4" pour with control joints cut to prevent future cracking. We also regraded the edges so water flows away from the garage — something the original installer got wrong.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">The Result</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">The homeowner now has a flat, properly draining, 28-year-warranted driveway. Total project: 3 days including cure time. We'll seal it in 30 days once it's fully cured.</p>
+    <div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:10px;padding:16px;margin-top:20px">
+      <div style="font-size:12px;color:#f05c1c;font-weight:600;margin-bottom:6px">📸 Add project photos here</div>
+      <div style="font-size:11px;color:#555">Upload before/during/after photos from this job. Recommended: 3–6 photos, labeled before_1.jpg, during_1.jpg, after_1.jpg etc. in /images/projects/eden-prairie-driveway/</div>
+    </div>`
+  },
+  'driveway-warning-signs': {
+    cat: 'Homeowner Tips',
+    title: '5 Early Warning Signs Your Driveway Needs Attention (Before It Gets Expensive)',
+    date: 'March 8, 2026',
+    readtime: '5 min read',
+    body: `<p style="margin-bottom:16px;color:#9a9a94">Most homeowners don't think about their concrete driveway until something goes seriously wrong. Here's what to look for early — when the fix is still simple and affordable.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">1. Hairline Cracks Running the Length of the Slab</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">Hairline cracks are normal in any concrete — but when they run longer than 12 inches or start to widen past 1/4", water is getting in. Once water gets in and freezes in a Minnesota winter, that crack doubles. Catch it early with crack filler and it's a $15 fix. Ignore it for two winters and you're looking at full panel replacement.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">2. Uneven or Sunken Sections</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">If one section of your driveway is lower than another, the sub-base underneath has moved. This can be soil erosion, tree roots, or poor original installation. A trip hazard today is a liability tomorrow.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">3. Water Pooling After Rain</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">Concrete should drain water away from your home, not pool on top of it. Standing water accelerates deterioration and, more importantly, can drain toward your foundation. If you see consistent pooling after rain, it's a grading problem that needs addressing.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">4. Surface Spalling or Flaking</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">If the surface of your concrete is starting to flake, pit, or look like it's peeling, this is called spalling. It's often caused by de-icing salts, freeze-thaw cycles, or low-quality original concrete. A resurfacing treatment can extend the life significantly if caught early.</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.04em;color:#f05c1c;margin:20px 0 10px">5. Edge Crumbling</h3>
+    <p style="margin-bottom:16px;color:#9a9a94">Concrete edges break down faster than the middle because they have less support and more exposure. Small crumbling at the edge is normal over time — but if you're losing more than an inch of edge, the deterioration is progressing inward. Time to assess the whole slab.</p>
+    <div style="background:#1c1c1c;border:1px solid var(--orange);border-radius:10px;padding:16px;margin-top:24px">
+      <div style="font-weight:600;margin-bottom:6px">See any of these on your driveway?</div>
+      <div style="font-size:12px;color:#9a9a94;margin-bottom:12px">Send us photos through our estimator and we'll give you an honest assessment — no drive-out needed.</div>
+      <button onclick="window.location='/#estimator';closePost()" style="padding:9px 18px;border-radius:6px;background:var(--orange);border:none;color:#fff;font-size:12px;font-weight:600;cursor:pointer">Get Free Assessment →</button>
+    </div>`
+  }
+};
+
+function openPost(slug) {
+  const post = POSTS[slug];
+  if (!post) {
+    document.getElementById('modal-cat').textContent = 'Coming Soon';
+    document.getElementById('modal-content').innerHTML = `
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.04em;margin-bottom:12px">Full Post Coming Soon</h2>
+      <p style="color:#9a9a94;margin-bottom:20px">This post is being written. Check back soon — or get in touch directly for expert advice on your specific situation.</p>
+      <button onclick="window.location='/#contact';closePost()" style="padding:10px 22px;border-radius:6px;background:var(--orange);border:none;color:#fff;font-size:13px;font-weight:600;cursor:pointer">Contact Us →</button>`;
+  } else {
+    document.getElementById('modal-cat').textContent = post.cat;
+    document.getElementById('modal-content').innerHTML = `
+      <div style="font-size:11px;color:#555;margin-bottom:16px;font-family:'DM Mono',monospace">${post.date} · ${post.readtime}</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:0.04em;margin-bottom:20px;line-height:1.1">${post.title}</h2>
+      ${post.body}
+      <div style="margin-top:28px;padding-top:20px;border-top:1px solid #2a2a2a;display:flex;gap:12px">
+        <button onclick="window.location='/#estimator';closePost()" style="padding:10px 22px;border-radius:6px;background:var(--orange);border:none;color:#fff;font-size:13px;font-weight:600;cursor:pointer">Get Free Estimate →</button>
+        <button onclick="closePost()" style="padding:10px 22px;border-radius:6px;background:transparent;border:1px solid #2a2a2a;color:#9a9a94;font-size:13px;cursor:pointer">← Back to Blog</button>
+      </div>`;
+  }
+  document.getElementById('post-modal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closePost() {
+  document.getElementById('post-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function loadMore() {
+  this.event?.target?.setAttribute('disabled', true);
+  document.querySelector('.lm-btn').textC
